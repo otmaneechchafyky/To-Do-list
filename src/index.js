@@ -1,12 +1,28 @@
 import _ from 'lodash';
 import './style.css';
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hi');
-    return element;
+import populate from './modules/populate.js';
+
+const tasks = [
+  {
+    description: 'Go to work',
+    completed: false,
+    index: 0
+  },
+  {
+    description: 'sleep',
+    completed: true,
+    index: 7
+  },
+  {
+    description: 'cool',
+    completed: true,
+    index: 2
+  },
+  {
+    description: 'need allah',
+    completed: true,
+    index: 55
   }
-  
-  document.body.appendChild(component());
+];
+
+populate(tasks);
