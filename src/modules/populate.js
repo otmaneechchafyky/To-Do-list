@@ -1,7 +1,15 @@
 import sortTasks from './sortTasks.js';
+import storeBooks from "./storeTasks.js";
+
+// const storeBooks = (toBeStored) => {
+//   localStorage.setItem('storedTasks', JSON.stringify(toBeStored));
+// }
 
 const populate = (toBePopulated) => {
   const listContainer = document.querySelector('.list-container');
+  while (listContainer.firstChild) {
+    listContainer.removeChild(listContainer.firstChild);
+  }
   sortTasks(toBePopulated);
 
   toBePopulated.forEach((element) => {
@@ -15,5 +23,6 @@ const populate = (toBePopulated) => {
       `;
     listContainer.appendChild(task);
   });
+  storeBooks(toBePopulated);
 };
 export default populate;

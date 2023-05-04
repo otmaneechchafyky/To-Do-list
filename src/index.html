@@ -29,9 +29,10 @@
           </g>
         </svg>
       </div>
-      <div class="add-task common">
-        <input type="text" name="add-task" id="add-task" placeholder="Add to your list"/>
-        <svg
+      <form action="#" class="add-task common">
+        <input type="text" name="add-task" id="add-task-input" placeholder="Add to your list"/>
+        <button type="button" class="add-task-btn">
+          <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -42,7 +43,8 @@
             d="M9.3 20.275L4.7 15.7q-.15-.15-.213-.325T4.425 15q0-.2.063-.375T4.7 14.3l4.625-4.625q.275-.275.7-.287t.7.287q.3.275.3.7t-.3.725l-2.9 2.9H17V5q0-.425.288-.713T18 4q.425 0 .713.288T19 5v10q0 .425-.288.713T18 16H7.825l2.9 2.875q.275.275.288.688t-.288.712q-.3.3-.712.3t-.713-.3Z"
           />
         </svg>
-      </div>
+        </button> 
+      </form>
       <ul class="list-container"></ul>
       <button type="button" class="clear-all">
         Clear All completed

@@ -21,6 +21,12 @@ li {
   list-style: none;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .to-do-container {
   display: flex;
   flex-direction: column;
@@ -46,7 +52,7 @@ li {
   font-weight: 600;
 }
 
-.to-do-container .add-task #add-task {
+.to-do-container .add-task #add-task-input {
   height: 3.9rem;
   width: 90%;
   border: 0;
@@ -55,7 +61,7 @@ li {
   color: gray;
 }
 
-.to-do-container .add-task #add-task::placeholder {
+.to-do-container .add-task #add-task-input::placeholder {
   font-style: italic;
   color: silver;
 }
