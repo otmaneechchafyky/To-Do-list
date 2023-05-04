@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./assets/pf-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h1><b>Hello visitor, welcome to my Project</b></h1>
