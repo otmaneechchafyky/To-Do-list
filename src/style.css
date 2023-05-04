@@ -28,7 +28,7 @@ li {
   align-items: center;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 7px 7px 18px 0px rgba(0,0,0,0.1);
+  box-shadow: 7px 7px 18px 0 rgba(0, 0, 0, 0.1);
 }
 
 .to-do-container .common {
@@ -44,7 +44,6 @@ li {
 .to-do-title {
   font-size: 1rem;
   font-weight: 600;
-
 }
 
 .to-do-container .add-task #add-task {
