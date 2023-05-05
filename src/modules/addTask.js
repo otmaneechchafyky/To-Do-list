@@ -1,13 +1,9 @@
-import taskObj from './taskObj'
+import TaskObj from './taskObj.js';
 
 const addTask = (descriptionToBeAdded, arr) => {
-    if (descriptionToBeAdded === '') {
-        alert('Please, Add a task')
-    } else {
-        const newTask = new taskObj(descriptionToBeAdded);
-      arr.push(newTask);
-      newTask.index = arr.length;
-    }
-  }
+  const newTask = new TaskObj(descriptionToBeAdded);
+  arr.push(newTask);
+  newTask.index = arr.length;
+};
 
-  export default addTask;
+export default addTask;
