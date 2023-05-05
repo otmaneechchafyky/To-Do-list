@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  padding: 5rem 0;
   background-color: rgba(192, 192, 192, 0.151);
   color: gray;
   font-family: 'Roboto Mono', sans-serif;
@@ -106,4 +106,24 @@ button {
 .check {
   transform: scale(1.5);
   border-radius: 0;
+}
+
+.change-background {
+  background-color: rgba(255, 255, 0, 0.295);
+  height: 4rem;
+  width: 100%;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.transp-background {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: 1.1rem;
+  color: gray;
+  font-family: 'Roboto Mono',sans-serif;
 }
