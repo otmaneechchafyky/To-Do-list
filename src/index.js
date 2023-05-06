@@ -1,9 +1,10 @@
-// import _ from 'lodash';
 import './style.css';
 import showTasks from './modules/showTasks.js';
 import addTask from './modules/addTask.js';
 import updateTask from './modules/updateTask.js';
 import removeTask from './modules/removeTask.js';
+import clear from './modules/clear.js';
+import isCompleted from './modules/comletedTask.js';
 
 let tasks = [];
 
@@ -18,7 +19,7 @@ addTaskInput.addEventListener('keypress', (event) => {
   }
 });
 
-// Add click event to the the trash to targets
+// Add click event
 document.addEventListener('click', (event) => {
   const allDesc = document.querySelectorAll('.description');
 
@@ -53,6 +54,30 @@ document.addEventListener('click', (event) => {
       removeTask(tasks, index);
       showTasks(tasks);
     }
+  });
+
+  // Declare completed tasks
+  const checks = document.querySelectorAll('.checks');
+  checks.forEach((check, index) => {
+    if (event.target === check) {
+      isCompleted(check, index, tasks);
+    }
+  });
+
+  // Clear all checked tasks in one click
+  const clearAll = document.querySelector('.clear-all');
+  if (event.target === clearAll) {
+    tasks = clear(tasks);
+    showTasks(tasks);
+  }
+});
+
+// Check if task is completed
+const checks = document.querySelectorAll('.checks');
+checks.forEach((checkbox, index) => {
+  checkbox.addEventListener('change', () => {
+    isCompleted(checkbox, index);
+    showTasks(tasks);
   });
 });
 
