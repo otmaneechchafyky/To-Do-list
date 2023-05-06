@@ -7,5 +7,4 @@ const isCompleted = (check, index, tasks) => {
     localStorage.setItem('storedTasks', JSON.stringify(tasks));
   }
 };
-
 export default isCompleted;

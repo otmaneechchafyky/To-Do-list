@@ -81,6 +81,6 @@ checks.forEach((checkbox, index) => {
   });
 });
 
-// Get data from locale storage and show the final the updated tasks list
+// Get data from locale storage and show the final the updated tasks List
 tasks = JSON.parse(localStorage.getItem('storedTasks')) || [];
 showTasks(tasks);

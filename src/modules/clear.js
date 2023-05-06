@@ -1,4 +1,4 @@
-export default (tasks) => {
+const clear = (tasks) => {
   tasks = tasks.filter((item) => item.completed === false);
   let i = 0;
   tasks.forEach((task) => {
@@ -7,3 +7,4 @@ export default (tasks) => {
   });
   return tasks;
 };
+export default clear;

@@ -4,5 +4,4 @@ const removeTask = (arr, index) => {
     arr[i].index = i + 1;
   }
 };
-
 export default removeTask;

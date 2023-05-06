@@ -21,7 +21,7 @@ const showTasks = (toBePopulated) => {
     task.classList.add('task-class');
     listContainer.appendChild(task);
 
-    // Add check mark
+    // Add check mark when it is true
     if (element.completed === true) {
       document.getElementById(element.index).setAttribute('checked', 'checked');
     } else {

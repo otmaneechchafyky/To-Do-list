@@ -1,3 +1,4 @@
+// Object class
 class taskObj {
   constructor(description) {
     this.description = description;
