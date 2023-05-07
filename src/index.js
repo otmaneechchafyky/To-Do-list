@@ -26,7 +26,7 @@ document.querySelector('.add-task-btn').addEventListener('click', () => {
     showTasks(tasks);
     form.reset();
   }
-})
+});
 
 // Add click event
 document.addEventListener('click', (event) => {
@@ -96,12 +96,12 @@ showTasks(tasks);
 
 // onload transition
 window.onload = () => {
-    document.querySelector('.todo-icon').classList.add('animate-icon');
-    document.querySelector('.to-do-name').classList.add('animate-icon');
-}
+  document.querySelector('.todo-icon').classList.add('animate-icon');
+  document.querySelector('.to-do-name').classList.add('animate-icon');
+};
 
 // show task's date
 
- const d = new Date().toLocaleDateString();
+const d = new Date().toLocaleDateString();
 
- document.querySelector('.date').textContent = 'Tasks of ' + d;
+document.querySelector('.date').textContent = `Tasks of ${d}`;
