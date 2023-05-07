@@ -12,7 +12,7 @@ body {
   justify-content: center;
   width: 100vw;
   padding: 5rem 0;
-  background-color: rgba(192, 192, 192, 0.151);
+  background-color: #05445E;
   color: gray;
   font-family: 'Roboto Mono', sans-serif;
 }
@@ -27,14 +27,42 @@ button {
   cursor: pointer;
 }
 
+svg:hover {
+  cursor: pointer;
+}
+
 .to-do-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
-  background-color: #fff;
+  background-color: #05445E;
   border-radius: 3px;
   box-shadow: 7px 7px 18px 0 rgba(0, 0, 0, 0.1);
+  border: 5px solid #189AB4;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  border-bottom: 2px solid #189AB4;
+  padding-bottom: 30px;
+}
+
+header p {
+  transition: .8s ease;
+}
+
+.todo-icon {
+  transition: .8s ease;
+}
+
+.animate-icon {
+  transform: translateY(20px);
 }
 
 .to-do-container .common {
@@ -44,12 +72,17 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  border-bottom: 1px solid rgba(192, 192, 192, 0.473);
+  border-bottom: 2px solid #189AB4;
 }
 
 .to-do-title {
   font-size: 1rem;
   font-weight: 600;
+  color: #D4F1F4;
+}
+
+.add-task {
+  background-color: #189AB4;
 }
 
 .to-do-container .add-task #add-task-input {
@@ -58,12 +91,13 @@ button {
   border: 0;
   outline: transparent;
   font-size: 1.1rem;
-  color: gray;
+  color: #05445E;
+  background-color: #189AB4;
 }
 
 .to-do-container .add-task #add-task-input::placeholder {
   font-style: italic;
-  color: silver;
+  color: #05445E;
 }
 
 .to-do-container .clear-all {
@@ -72,9 +106,9 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  color: silver;
+  color: #D4F1F4;
   border: 0;
-  border-top: 1px solid rgba(192, 192, 192, 0.473);
+  border-top: 1px solid #189AB4;
   cursor: pointer;
   height: 5rem;
   width: 100%;
@@ -93,7 +127,7 @@ button {
   padding: 0 3%;
   display: flex;
   align-items: center;
-  border-top: 1px solid rgba(192, 192, 192, 0.473);
+  border-top: 1px solid #189AB4;
 }
 
 .to-do-container .list-container li .description-container {
@@ -101,15 +135,16 @@ button {
   gap: 4%;
   align-items: center;
   width: 100%;
+  color: #D4F1F4;
 }
 
-.check {
-  transform: scale(1.5);
+/* .check {
+  transform: scale(1.8);
   border-radius: 0;
-}
+} */
 
 .change-background {
-  background-color: rgba(255, 255, 0, 0.274);
+  background-color: #0b4e46b4;
   height: 4rem;
   width: 100%;
   display: flex;
@@ -123,6 +158,68 @@ button {
   border: 0;
   outline: none;
   font-size: 1.1rem;
-  color: gray;
+  color: #D4F1F4;
   font-family: 'Roboto Mono', sans-serif;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 12px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #D4F1F4;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #189AB4;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #D4F1F4;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

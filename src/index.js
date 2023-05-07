@@ -8,7 +8,7 @@ import isCompleted from './modules/comletedTask.js';
 
 let tasks = [];
 
-// const addTaskBtn = document.querySelector('.add-task-btn');
+// Add new task when press the enter key
 const form = document.querySelector('.add-task');
 const addTaskInput = document.querySelector('#add-task-input');
 addTaskInput.addEventListener('keypress', (event) => {
@@ -18,6 +18,15 @@ addTaskInput.addEventListener('keypress', (event) => {
     form.reset();
   }
 });
+
+// Add new task when click the button on the left
+document.querySelector('.add-task-btn').addEventListener('click', () => {
+  if (addTaskInput.value !== '') {
+    addTask(addTaskInput.value, tasks);
+    showTasks(tasks);
+    form.reset();
+  }
+})
 
 // Add click event
 document.addEventListener('click', (event) => {
@@ -84,3 +93,15 @@ checks.forEach((checkbox, index) => {
 // Get data from locale storage and show the final the updated tasks List
 tasks = JSON.parse(localStorage.getItem('storedTasks')) || [];
 showTasks(tasks);
+
+// onload transition
+window.onload = () => {
+    document.querySelector('.todo-icon').classList.add('animate-icon');
+    document.querySelector('.to-do-name').classList.add('animate-icon');
+}
+
+// show task's date
+
+ const d = new Date().toLocaleDateString();
+
+ document.querySelector('.date').textContent = 'Tasks of ' + d;
