@@ -27,6 +27,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -70,6 +71,12 @@
 
 - **Use ES6 modules and webpack**
 - **Create it dynamically** 
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://otmaneechchafyky.github.io/To-Do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
