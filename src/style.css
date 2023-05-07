@@ -27,8 +27,32 @@ button {
   cursor: pointer;
 }
 
-svg:hover {
+svg[class='trash'] {
+  transition: .3s ease-in-out;
+}
+
+svg[class='trash']:hover path {
+  fill: rgb(238, 82, 82)
+}
+
+svg[class='trash']:hover {
   cursor: pointer;
+  animation: za3ze3 .2s linear 5;
+}
+
+@keyframes za3ze3 {
+  0%,100% {
+    transform: translate(0);
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: translate(5px);
+    transform: rotate(20deg);
+  }
+  66% {
+    transform: translate(-5px);
+    transform: rotate(-20deg);
+  }
 }
 
 .to-do-container {
@@ -106,12 +130,19 @@ header p {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  font-weight: 600;
   color: #d4f1f4;
   border: 0;
   border-top: 1px solid #189ab4;
   cursor: pointer;
   height: 5rem;
   width: 100%;
+  transition: .3s ease;
+}
+
+.to-do-container .clear-all:hover {
+  background-color: #d4f1f4;
+  color: #05445e;
 }
 
 .to-do-container .list-container {
@@ -137,11 +168,6 @@ header p {
   width: 100%;
   color: #d4f1f4;
 }
-
-/* .check {
-  transform: scale(1.8);
-  border-radius: 0;
-} */
 
 .change-background {
   background-color: #0b4e46b4;
