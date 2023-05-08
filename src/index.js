@@ -19,7 +19,7 @@ addTaskInput.addEventListener('keypress', (event) => {
   }
 });
 
-// Add new task when click the button on the left
+// Add new task when click the button on the right
 document.querySelector('.add-task-btn').addEventListener('click', () => {
   if (addTaskInput.value !== '') {
     addTask(addTaskInput.value, tasks);
