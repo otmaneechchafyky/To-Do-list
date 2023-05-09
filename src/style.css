@@ -74,19 +74,27 @@ header {
   justify-content: center;
   gap: 2%;
   border-bottom: 2px solid #189ab4;
-  padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    align-items: start;
+    padding: .5rem;
+    padding-top: 2rem;
+    width: auto;
+  }
+
+  .to-do-container {
+    width: 100%;
+  }
 }
 
 header p {
-  transition: 0.8s ease;
-}
-
-.todo-icon {
-  transition: 0.8s ease;
-}
-
-.animate-icon {
-  transform: translateY(20px);
+  font-size: 2rem;
+  color: #75E6DA;
+  font-weight: 600;
+  letter-spacing: 5px;
 }
 
 .to-do-container .common {
