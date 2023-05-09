@@ -28,27 +28,30 @@ button {
 }
 
 svg[class='trash'] {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 svg[class='trash']:hover path {
-  fill: rgb(238, 82, 82)
+  fill: rgb(238, 82, 82);
 }
 
 svg[class='trash']:hover {
   cursor: pointer;
-  animation: za3ze3 .2s linear 5;
+  animation: za3ze3 0.2s linear 5;
 }
 
 @keyframes za3ze3 {
-  0%,100% {
+  0%,
+  100% {
     transform: translate(0);
     transform: rotate(0deg);
   }
+
   33% {
     transform: translate(5px);
     transform: rotate(20deg);
   }
+
   66% {
     transform: translate(-5px);
     transform: rotate(-20deg);
@@ -80,7 +83,7 @@ header {
   body {
     display: flex;
     align-items: start;
-    padding: .5rem;
+    padding: 0.5rem;
     padding-top: 2rem;
     width: auto;
   }
@@ -92,7 +95,7 @@ header {
 
 header p {
   font-size: 2rem;
-  color: #75E6DA;
+  color: #75e6da;
   font-weight: 600;
   letter-spacing: 5px;
 }
@@ -145,7 +148,7 @@ header p {
   cursor: pointer;
   height: 5rem;
   width: 100%;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .to-do-container .clear-all:hover {
